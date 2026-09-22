@@ -1,0 +1,881 @@
+/* ==============================
+   CARSTAR — FINAL STYLES
+   ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #07090d;
+    color: #ffffff;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* ==============================
+   HEADER
+   ============================== */
+
+.site-header {
+    width: 100%;
+    padding: 20px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(7, 9, 13, 0.94);
+
+    border-bottom: 1px solid #1b2430;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    backdrop-filter: blur(14px);
+}
+
+.logo {
+    color: #168cff;
+    text-decoration: none;
+
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.instagram {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #aab2bd;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.instagram:hover {
+    color: #168cff;
+}
+
+.instagram-icon {
+    width: 19px;
+    height: 19px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instagram-icon svg {
+    width: 19px;
+    height: 19px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+}
+
+.instagram-icon .instagram-dot {
+    fill: currentColor;
+    stroke: none;
+}
+
+/* ==============================
+   HERO
+   ============================== */
+
+.hero {
+    min-height: 80vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 90px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(22, 140, 255, 0.15),
+            transparent 45%
+        );
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero-label {
+    color: #168cff;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 72px);
+
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    margin-bottom: 28px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #168cff;
+}
+
+.hero-description {
+    max-width: 650px;
+
+    margin: 0 auto 38px;
+
+    color: #a7adb7;
+
+    font-size: 19px;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+
+/* ==============================
+   BUTTONS
+   ============================== */
+
+.button,
+.secondary-button {
+    display: inline-block;
+
+    padding: 16px 32px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+.button {
+    background: #168cff;
+    color: white;
+
+    box-shadow:
+        0 10px 30px rgba(22, 140, 255, 0.18);
+}
+
+.button:hover {
+    background: #0876dc;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 35px rgba(22, 140, 255, 0.28);
+}
+
+.secondary-button {
+    border: 1px solid #293544;
+    color: #d9dee5;
+    background: rgba(8, 11, 16, 0.6);
+}
+
+.secondary-button:hover {
+    border-color: #168cff;
+    color: #ffffff;
+}
+
+
+/* ==============================
+   PACKAGES
+   ============================== */
+
+.packages {
+    width: min(1200px, calc(100% - 30px));
+
+    margin: 0 auto 110px;
+
+    padding: 20px 0;
+}
+
+.packages-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.packages-subtitle,
+.booking-label {
+    color: #168cff;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+}
+
+.packages-header h2 {
+    font-size: clamp(32px, 5vw, 48px);
+
+    margin-bottom: 12px;
+}
+
+.packages-description {
+    color: #8f98a4;
+    font-size: 16px;
+}
+
+.packages-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+
+    align-items: stretch;
+}
+
+
+/* ==============================
+   PACKAGE CARD
+   ============================== */
+
+.package-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 32px 28px;
+
+    background: #0d1118;
+
+    border: 1px solid #202b38;
+
+    border-radius: 20px;
+
+    min-height: 560px;
+
+    overflow: hidden;
+
+    transition: 0.25s ease;
+}
+
+.package-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -100px;
+    right: -80px;
+
+    background: rgba(22, 140, 255, 0.10);
+
+    border-radius: 50%;
+
+    filter: blur(20px);
+
+    pointer-events: none;
+}
+
+.package-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(22, 140, 255, 0.55);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.premium-card {
+    border-color: rgba(22, 140, 255, 0.55);
+
+    background:
+        linear-gradient(
+            145deg,
+            #0e151e,
+            #0b1016
+        );
+
+    box-shadow:
+        0 15px 45px rgba(22, 140, 255, 0.08);
+}
+
+.package-number {
+    color: #168cff;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.package-card h3 {
+    position: relative;
+    z-index: 2;
+
+    font-size: 30px;
+
+    margin-bottom: 25px;
+}
+
+.popular-badge {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    padding: 6px 10px;
+
+    border: 1px solid rgba(22, 140, 255, 0.4);
+
+    border-radius: 20px;
+
+    color: #168cff;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+/* ==============================
+   PRICES
+   ============================== */
+
+.package-prices {
+    display: grid;
+
+    gap: 10px;
+
+    margin-bottom: 28px;
+}
+
+.package-prices div {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 14px;
+
+    background: #080b10;
+
+    border: 1px solid #1c2632;
+
+    border-radius: 9px;
+}
+
+.package-prices span {
+    color: #8f98a4;
+    font-size: 14px;
+}
+
+.package-prices strong {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+
+/* ==============================
+   PACKAGE CONTENT
+   ============================== */
+
+.package-content {
+    flex: 1;
+}
+
+.package-content h4 {
+    color: #d7dce2;
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+}
+
+.package-content ul {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+.package-content li {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    color: #aab2bd;
+
+    font-size: 14px;
+
+    line-height: 1.45;
+}
+
+.package-content li span {
+    color: #168cff;
+
+    font-weight: 900;
+
+    flex-shrink: 0;
+}
+
+
+/* ==============================
+   PACKAGE BUTTON
+   ============================== */
+
+.package-button {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 14px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    color: white;
+
+    border: 1px solid #263443;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+.package-button:hover {
+    background: #168cff;
+
+    border-color: #168cff;
+
+    transform: translateY(-1px);
+}
+
+
+/* ==============================
+   BOOKING
+   ============================== */
+
+.booking {
+    width: min(700px, calc(100% - 30px));
+
+    margin: 0 auto 110px;
+
+    padding: 45px;
+
+    background: #0d1118;
+
+    border: 1px solid #202b38;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.booking-header {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.booking-header h2 {
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+.booking-header > p:last-child {
+    color: #8f98a4;
+    font-size: 15px;
+}
+
+
+/* ==============================
+   FORM
+   ============================== */
+
+.form-group {
+    margin-bottom: 21px;
+}
+
+label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #d4d9df;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input,
+select {
+    width: 100%;
+
+    padding: 15px 16px;
+
+    border-radius: 9px;
+
+    border: 1px solid #293544;
+
+    background: #080b10;
+
+    color: white;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+input::placeholder {
+    color: #68717d;
+}
+
+input:focus,
+select:focus {
+    border-color: #168cff;
+
+    box-shadow:
+        0 0 0 3px rgba(22, 140, 255, 0.10);
+}
+
+select {
+    cursor: pointer;
+}
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* ==============================
+   PRICE
+   ============================== */
+
+.price-box {
+    margin-top: 4px;
+    margin-bottom: 25px;
+
+    padding: 18px;
+
+    background: rgba(22, 140, 255, 0.08);
+
+    border: 1px solid rgba(22, 140, 255, 0.35);
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    color: #168cff;
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+
+/* ==============================
+   SUBMIT
+   ============================== */
+
+.submit-button {
+    width: 100%;
+
+    margin-top: 8px;
+
+    padding: 17px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #168cff;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.submit-button:hover {
+    background: #0876dc;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 10px 25px rgba(22, 140, 255, 0.2);
+}
+
+.submit-button:disabled {
+    opacity: 0.65;
+    cursor: wait;
+    transform: none;
+}
+
+
+/* ==============================
+   SUCCESS / ERROR
+   ============================== */
+
+.success-message,
+.error-message {
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    line-height: 1.5;
+}
+
+.success-message {
+    background: rgba(22, 140, 255, 0.08);
+
+    border: 1px solid rgba(22, 140, 255, 0.35);
+
+    color: #dceeff;
+}
+
+.success-message strong,
+.success-message span {
+    display: block;
+}
+
+.success-message span {
+    margin-top: 5px;
+}
+
+.error-message {
+    background: rgba(255, 70, 70, 0.08);
+
+    border: 1px solid rgba(255, 70, 70, 0.3);
+
+    color: #ffb4b4;
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+    padding: 40px 20px;
+
+    text-align: center;
+
+    color: #606975;
+
+    font-size: 14px;
+
+    border-top: 1px solid #1b2430;
+}
+
+.footer-logo {
+    color: #168cff;
+
+    font-size: 20px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+footer a {
+    color: #8f98a4;
+
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #168cff;
+}
+
+.copyright {
+    display: block;
+    margin-top: 18px;
+}
+
+
+/* ==============================
+   MOBILE
+   ============================== */
+
+@media (max-width: 900px) {
+
+    .packages-container {
+        grid-template-columns: 1fr;
+
+        max-width: 650px;
+
+        margin: 0 auto;
+    }
+
+    .package-card {
+        min-height: auto;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .site-header {
+        padding: 17px 20px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .instagram {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 75vh;
+
+        padding: 70px 20px;
+    }
+
+    .hero-label {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .hero h1 {
+        font-size: 41px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .button,
+    .secondary-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .packages {
+        width: calc(100% - 30px);
+
+        margin-bottom: 80px;
+    }
+
+    .packages-header {
+        margin-bottom: 35px;
+    }
+
+    .packages-header h2 {
+        font-size: 32px;
+    }
+
+    .package-card {
+        padding: 27px 22px;
+        border-radius: 17px;
+    }
+
+    .package-card h3 {
+        font-size: 27px;
+    }
+
+    .booking {
+        width: calc(100% - 30px);
+
+        padding: 28px 20px;
+
+        border-radius: 18px;
+
+        margin-bottom: 70px;
+    }
+
+    .booking-header h2 {
+        font-size: 27px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    input,
+    select {
+        padding: 14px;
+    }
+}
