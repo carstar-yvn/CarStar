@@ -47,6 +47,21 @@ a {
     z-index: 100;
 
     backdrop-filter: blur(14px);
+    .phone-link {
+    color: #168cff;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid #168cff;
+    padding: 9px 15px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    white-space: nowrap;
+}
+
+.phone-link:hover {
+    background: #168cff;
+    color: #ffffff;
+}
 }
 
 .logo {
@@ -878,4 +893,41 @@ footer a:hover {
     select {
         padding: 14px;
     }
+}
+.location-button {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    background: #168cff;
+    border: 1px solid #168cff;
+    box-shadow: 0 10px 30px rgba(22, 140, 255, 0.18);
+    transition: 0.25s ease;
+}
+
+.location-button:hover {
+    background: #0876dc;
+    border-color: #0876dc;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 35px rgba(22, 140, 255, 0.28);
+}
+.header-contacts {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-contacts a {
+    color: #168cff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.phone-link {
+    border: 1px solid #168cff;
+    padding: 8px 14px;
+    border-radius: 8px;
 }
