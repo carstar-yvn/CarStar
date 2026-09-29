@@ -1,933 +1,616 @@
-/* ==============================
-   CARSTAR — FINAL STYLES
-   ============================== */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 90px;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #07090d;
-    color: #ffffff;
-    line-height: 1.5;
-    overflow-x: hidden;
-}
-
-a {
-    color: inherit;
-}
-
-
-/* ==============================
-   HEADER
-   ============================== */
-
-.site-header {
-    width: 100%;
-    padding: 20px 7%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background: rgba(7, 9, 13, 0.94);
-
-    border-bottom: 1px solid #1b2430;
-
-    position: sticky;
-    top: 0;
-    z-index: 100;
-
-    backdrop-filter: blur(14px);
-    .phone-link {
-    color: #168cff;
-    text-decoration: none;
-    font-weight: 600;
-    border: 1px solid #168cff;
-    padding: 9px 15px;
-    border-radius: 8px;
-    transition: 0.3s ease;
-    white-space: nowrap;
-}
-
-.phone-link:hover {
-    background: #168cff;
-    color: #ffffff;
-}
-}
-
-.logo {
-    color: #168cff;
-    text-decoration: none;
-
-    font-size: 28px;
-    font-weight: 900;
-    letter-spacing: 2px;
-}
+<!DOCTYPE html>
+<html lang="hy">
 
-.instagram {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    color: #aab2bd;
-    text-decoration: none;
+    <meta
+        name="description"
+        content="CarStar — ավտոմեքենաների պրոֆեսիոնալ քիմմաքրում Երևանում։"
+    >
 
-    font-size: 14px;
-    font-weight: 600;
-
-    transition: 0.2s ease;
-}
+    <title>CarStar — Ավտոմեքենաների քիմմաքրում</title>
 
-.instagram:hover {
-    color: #168cff;
-}
+    <link rel="stylesheet" href="style.css">
+</head>
 
-.instagram-icon {
-    width: 19px;
-    height: 19px;
+<body>
 
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
+<header class="site-header">
 
-.instagram-icon svg {
-    width: 19px;
-    height: 19px;
+    <div class="header-contacts">
 
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.8;
-}
+        <a
+            href="https://www.instagram.com/carstar.yvn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="instagram"
+            aria-label="Instagram CarStar"
+        >
+            <span class="instagram-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                    <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                    <circle cx="12" cy="12" r="4.2"></circle>
+                    <circle
+                        cx="17.4"
+                        cy="6.7"
+                        r="1.1"
+                        class="instagram-dot"
+                    ></circle>
+                </svg>
+            </span>
 
-.instagram-icon .instagram-dot {
-    fill: currentColor;
-    stroke: none;
-}
+            <span>@carstar.yvn</span>
+        </a>
 
-/* ==============================
-   HERO
-   ============================== */
+        <a
+            href="tel:+37491244204"
+            class="phone-link"
+            aria-label="Զանգահարել CarStar"
+        >
+            📞 091 244 204
+        </a>
 
-.hero {
-    min-height: 80vh;
+    </div>
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+</header>
 
-    text-align: center;
 
-    padding: 90px 20px;
+<main>
 
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(22, 140, 255, 0.15),
-            transparent 45%
-        );
-}
+    <!-- HERO -->
 
-.hero-content {
-    max-width: 900px;
-}
+    <section class="hero">
 
-.hero-label {
-    color: #168cff;
+        <div class="hero-content">
 
-    font-size: 12px;
-    font-weight: 800;
+            <p class="hero-label">
+                CARSTAR • YEREVAN
+            </p>
 
-    letter-spacing: 5px;
+            <h1>
+                Վերադարձնենք Ձեր ավտոմեքենային
+                <span>կատարյալ մաքրությունը</span>
+            </h1>
 
-    margin-bottom: 22px;
-}
+            <p class="hero-description">
+                Ավտոմեքենաների սրահի պրոֆեսիոնալ քիմմաքրում Երևանում։
+            </p>
 
-.hero h1 {
-    font-size: clamp(42px, 6vw, 72px);
+            <div class="hero-actions">
 
-    line-height: 1.05;
+                <a href="#booking" class="button">
+                    Ամրագրել այցը
+                </a>
 
-    font-weight: 800;
+                <a href="#packages" class="secondary-button">
+                    Դիտել փաթեթները
+                </a>
 
-    margin-bottom: 28px;
-}
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query=Davtashen+3rd+District+34A%2C+Yerevan%2C+Armenia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="location-button"
+                >
+                    📍 Ինչպես հասնել
+                </a>
 
-.hero h1 span {
-    display: block;
-    color: #168cff;
-}
+            </div>
 
-.hero-description {
-    max-width: 650px;
+        </div>
 
-    margin: 0 auto 38px;
+    </section>
 
-    color: #a7adb7;
 
-    font-size: 19px;
-}
+    <!-- PACKAGES -->
 
-.hero-actions {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-}
+    <section class="packages" id="packages">
 
+        <div class="packages-header">
 
-/* ==============================
-   BUTTONS
-   ============================== */
+            <p class="packages-subtitle">
+                CARSTAR
+            </p>
 
-.button,
-.secondary-button {
-    display: inline-block;
+            <h2>
+                Քիմմաքրման փաթեթներ
+            </h2>
 
-    padding: 16px 32px;
+            <p class="packages-description">
+                Ընտրեք Ձեր ավտոմեքենային համապատասխան փաթեթը։
+            </p>
 
-    border-radius: 10px;
+        </div>
 
-    text-decoration: none;
 
-    font-size: 15px;
-    font-weight: 700;
+        <div class="packages-container">
 
-    transition: 0.25s ease;
-}
 
-.button {
-    background: #168cff;
-    color: white;
+            <!-- STANDARD -->
 
-    box-shadow:
-        0 10px 30px rgba(22, 140, 255, 0.18);
-}
+            <div class="package-card">
 
-.button:hover {
-    background: #0876dc;
+                <div class="package-number">
+                    01
+                </div>
 
-    transform: translateY(-2px);
+                <h3>
+                    Standard
+                </h3>
 
-    box-shadow:
-        0 14px 35px rgba(22, 140, 255, 0.28);
-}
+                <div class="package-prices">
 
-.secondary-button {
-    border: 1px solid #293544;
-    color: #d9dee5;
-    background: rgba(8, 11, 16, 0.6);
-}
+                    <div>
+                        <span>Սեդան</span>
+                        <strong>18 000 ֏</strong>
+                    </div>
 
-.secondary-button:hover {
-    border-color: #168cff;
-    color: #ffffff;
-}
+                    <div>
+                        <span>Ջիպ / SUV</span>
+                        <strong>22 000 ֏</strong>
+                    </div>
 
+                </div>
 
-/* ==============================
-   PACKAGES
-   ============================== */
+                <div class="package-content">
 
-.packages {
-    width: min(1200px, calc(100% - 30px));
+                    <h4>
+                        Փաթեթը ներառում է
+                    </h4>
 
-    margin: 0 auto 110px;
+                    <ul>
+                        <li>Տանիք</li>
+                        <li>Վահանակ</li>
+                        <li>Դռներ</li>
+                        <li>Նստատեղեր</li>
+                        <li>Հատակ</li>
+                        <li>Բեռնախցիկի քիմմաքրում</li>
+                    </ul>
 
-    padding: 20px 0;
-}
+                </div>
 
-.packages-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
+                <a
+                    href="#booking"
+                    class="package-button"
+                    data-package="standard"
+                >
+                    Ընտրել փաթեթը
+                </a>
 
-.packages-subtitle,
-.booking-label {
-    color: #168cff;
+            </div>
 
-    font-size: 13px;
-    font-weight: 800;
 
-    letter-spacing: 4px;
+            <!-- PREMIUM -->
 
-    margin-bottom: 10px;
-}
+            <div class="package-card premium-card">
 
-.packages-header h2 {
-    font-size: clamp(32px, 5vw, 48px);
+                <div class="package-number">
+                    02
+                </div>
 
-    margin-bottom: 12px;
-}
+                <div class="popular-badge">
+                    PREMIUM
+                </div>
 
-.packages-description {
-    color: #8f98a4;
-    font-size: 16px;
-}
+                <h3>
+                    Premium
+                </h3>
 
-.packages-container {
-    display: grid;
+                <div class="package-prices">
 
-    grid-template-columns: repeat(3, 1fr);
+                    <div>
+                        <span>Սեդան</span>
+                        <strong>25 000 ֏</strong>
+                    </div>
 
-    gap: 22px;
+                    <div>
+                        <span>Ջիպ / SUV</span>
+                        <strong>27 000 ֏</strong>
+                    </div>
 
-    align-items: stretch;
-}
+                </div>
 
+                <div class="package-content">
 
-/* ==============================
-   PACKAGE CARD
-   ============================== */
+                    <h4>
+                        Փաթեթը ներառում է
+                    </h4>
 
-.package-card {
-    position: relative;
+                    <ul>
 
-    display: flex;
-    flex-direction: column;
+                        <li>
+                            <span>✓</span>
+                            Standard փաթեթի բոլոր ծառայությունները
+                        </li>
 
-    padding: 32px 28px;
+                        <li>
+                            <span>✓</span>
+                            Ավտոմեքենայի լվացում
+                        </li>
 
-    background: #0d1118;
+                        <li>
+                            <span>✓</span>
+                            Շարժիչի լվացում
+                        </li>
 
-    border: 1px solid #202b38;
+                        <li>
+                            <span>✓</span>
+                            Նստատեղերի ապամոնտաժում և մաքրում
+                        </li>
 
-    border-radius: 20px;
+                    </ul>
 
-    min-height: 560px;
+                </div>
 
-    overflow: hidden;
+                <a
+                    href="#booking"
+                    class="package-button"
+                    data-package="premium"
+                >
+                    Ընտրել փաթեթը
+                </a>
 
-    transition: 0.25s ease;
-}
+            </div>
 
-.package-card::before {
-    content: "";
 
-    position: absolute;
+            <!-- FULL -->
 
-    width: 180px;
-    height: 180px;
+            <div class="package-card">
 
-    top: -100px;
-    right: -80px;
+                <div class="package-number">
+                    03
+                </div>
 
-    background: rgba(22, 140, 255, 0.10);
+                <h3>
+                    Full
+                </h3>
 
-    border-radius: 50%;
+                <div class="package-prices">
 
-    filter: blur(20px);
+                    <div>
+                        <span>Սեդան</span>
+                        <strong>30 000 ֏</strong>
+                    </div>
 
-    pointer-events: none;
-}
+                    <div>
+                        <span>Ջիպ / SUV</span>
+                        <strong>32 000 ֏</strong>
+                    </div>
 
-.package-card:hover {
-    transform: translateY(-6px);
+                </div>
 
-    border-color: rgba(22, 140, 255, 0.55);
+                <div class="package-content">
 
-    box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.3);
-}
+                    <h4>
+                        Փաթեթը ներառում է
+                    </h4>
 
-.premium-card {
-    border-color: rgba(22, 140, 255, 0.55);
+                    <ul>
 
-    background:
-        linear-gradient(
-            145deg,
-            #0e151e,
-            #0b1016
-        );
+                        <li>
+                            <span>✓</span>
+                            Premium փաթեթի բոլոր ծառայությունները
+                        </li>
 
-    box-shadow:
-        0 15px 45px rgba(22, 140, 255, 0.08);
-}
+                        <li>
+                            <span>✓</span>
+                            Ջրաքարի հեռացում բոլոր ապակիներից
+                        </li>
 
-.package-number {
-    color: #168cff;
+                        <li>
+                            <span>✓</span>
+                            Ավտոմեքենայի խնամքի փաթեթ
+                        </li>
 
-    font-size: 13px;
-    font-weight: 800;
+                    </ul>
 
-    letter-spacing: 2px;
+                </div>
 
-    margin-bottom: 15px;
-}
+                <a
+                    href="#booking"
+                    class="package-button"
+                    data-package="full"
+                >
+                    Ընտրել փաթեթը
+                </a>
 
-.package-card h3 {
-    position: relative;
-    z-index: 2;
+            </div>
 
-    font-size: 30px;
+        </div>
 
-    margin-bottom: 25px;
-}
+    </section>
 
-.popular-badge {
-    position: absolute;
 
-    top: 20px;
-    right: 20px;
+    <!-- BOOKING -->
 
-    padding: 6px 10px;
+    <section class="booking" id="booking">
 
-    border: 1px solid rgba(22, 140, 255, 0.4);
+        <div class="booking-header">
 
-    border-radius: 20px;
+            <p class="booking-label">
+                CARSTAR
+            </p>
 
-    color: #168cff;
+            <h2>
+                Ամրագրել քիմմաքրում
+            </h2>
 
-    font-size: 10px;
-    font-weight: 800;
+            <p>
+                Լրացրեք հայտը, և մենք կապ կհաստատենք Ձեզ հետ։
+            </p>
 
-    letter-spacing: 1px;
-}
+        </div>
 
 
-/* ==============================
-   PRICES
-   ============================== */
+        <form id="bookingForm">
 
-.package-prices {
-    display: grid;
+            <div class="form-group">
 
-    gap: 10px;
+                <label for="name">
+                    Ձեր անունը
+                </label>
 
-    margin-bottom: 28px;
-}
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Օրինակ՝ Արման"
+                    autocomplete="name"
+                    required
+                >
 
-.package-prices div {
-    display: flex;
+            </div>
 
-    justify-content: space-between;
-    align-items: center;
 
-    padding: 12px 14px;
+            <div class="form-group">
 
-    background: #080b10;
+                <label for="phone">
+                    Հեռախոսահամար
+                </label>
 
-    border: 1px solid #1c2632;
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="+374 XX XX XX XX"
+                    autocomplete="tel"
+                    inputmode="tel"
+                    required
+                >
 
-    border-radius: 9px;
-}
+            </div>
 
-.package-prices span {
-    color: #8f98a4;
-    font-size: 14px;
-}
 
-.package-prices strong {
-    color: #ffffff;
-    font-size: 16px;
-}
+            <div class="form-group">
 
+                <label for="car">
+                    Ձեր ավտոմեքենան
+                </label>
 
-/* ==============================
-   PACKAGE CONTENT
-   ============================== */
+                <input
+                    type="text"
+                    id="car"
+                    placeholder="Օրինակ՝ BMW F30"
+                    required
+                >
 
-.package-content {
-    flex: 1;
-}
+            </div>
 
-.package-content h4 {
-    color: #d7dce2;
 
-    font-size: 14px;
+            <div class="form-group">
 
-    margin-bottom: 18px;
-}
+                <label for="carType">
+                    Ավտոմեքենայի տեսակը
+                </label>
 
-.package-content ul {
-    list-style: none;
+                <select id="carType" required>
 
-    display: flex;
-    flex-direction: column;
+                    <option value="">
+                        Ընտրեք ավտոմեքենայի տեսակը
+                    </option>
 
-    gap: 13px;
-}
+                    <option value="sedan">
+                        Սեդան
+                    </option>
 
-.package-content li {
-    display: flex;
-    align-items: flex-start;
+                    <option value="suv">
+                        Ջիպ / SUV
+                    </option>
 
-    gap: 10px;
+                </select>
 
-    color: #aab2bd;
+            </div>
 
-    font-size: 14px;
 
-    line-height: 1.45;
-}
+            <div class="form-group">
 
-.package-content li span {
-    color: #168cff;
+                <label for="package">
+                    Քիմմաքրման փաթեթ
+                </label>
 
-    font-weight: 900;
+                <select id="package" required>
 
-    flex-shrink: 0;
-}
+                    <option value="">
+                        Ընտրեք փաթեթը
+                    </option>
 
+                    <option value="standard">
+                        Standard
+                    </option>
 
-/* ==============================
-   PACKAGE BUTTON
-   ============================== */
+                    <option value="premium">
+                        Premium
+                    </option>
 
-.package-button {
-    display: block;
+                    <option value="full">
+                        Full
+                    </option>
 
-    width: 100%;
+                </select>
 
-    margin-top: 30px;
+            </div>
 
-    padding: 14px;
 
-    text-align: center;
+            <div
+                id="priceBox"
+                class="price-box"
+                aria-live="polite"
+            >
+                Ընտրեք ավտոմեքենայի տեսակը և փաթեթը
+            </div>
 
-    text-decoration: none;
 
-    color: white;
+            <div class="form-row">
 
-    border: 1px solid #263443;
+                <div class="form-group">
 
-    border-radius: 9px;
+                    <label for="date">
+                        Ամսաթիվ
+                    </label>
 
-    font-size: 14px;
-    font-weight: 700;
+                    <input
+                        type="date"
+                        id="date"
+                        required
+                    >
 
-    transition: 0.25s ease;
-}
+                </div>
 
-.package-button:hover {
-    background: #168cff;
 
-    border-color: #168cff;
+                <div class="form-group">
 
-    transform: translateY(-1px);
-}
+                    <label for="time">
+                        Ցանկալի ժամ
+                    </label>
 
+                    <select id="time" required>
 
-/* ==============================
-   BOOKING
-   ============================== */
+                        <option value="">
+                            Ընտրեք ժամը
+                        </option>
 
-.booking {
-    width: min(700px, calc(100% - 30px));
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+                        <option value="18:00">18:00</option>
+                        <option value="19:00">19:00</option>
 
-    margin: 0 auto 110px;
+                    </select>
 
-    padding: 45px;
+                </div>
 
-    background: #0d1118;
+            </div>
 
-    border: 1px solid #202b38;
 
-    border-radius: 22px;
+            <button
+                type="submit"
+                class="submit-button"
+                id="submitButton"
+            >
+                ԱՄՐԱԳՐԵԼ
+            </button>
 
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.35);
-}
 
-.booking-header {
-    text-align: center;
+            <div
+                id="successMessage"
+                class="success-message"
+                role="status"
+                aria-live="polite"
+            >
 
-    margin-bottom: 35px;
-}
+                <strong>
+                    Շնորհակալություն։
+                </strong>
 
-.booking-header h2 {
-    font-size: 32px;
+                <span>
+                    Ձեր հայտը հաջողությամբ ընդունվել է։
+                    Մենք շուտով կապ կհաստատենք Ձեզ հետ։
+                </span>
 
-    margin-bottom: 10px;
-}
+            </div>
 
-.booking-header > p:last-child {
-    color: #8f98a4;
-    font-size: 15px;
-}
 
+            <div
+                id="errorMessage"
+                class="error-message"
+                role="alert"
+            >
+                Չհաջողվեց ուղարկել հայտը։ Խնդրում ենք կրկին փորձել։
+            </div>
 
-/* ==============================
-   FORM
-   ============================== */
+        </form>
 
-.form-group {
-    margin-bottom: 21px;
-}
+    </section>
 
-label {
-    display: block;
+</main>
 
-    margin-bottom: 8px;
 
-    color: #d4d9df;
+<!-- FOOTER -->
 
-    font-size: 14px;
-    font-weight: 600;
-}
+<footer>
 
-input,
-select {
-    width: 100%;
+    <div class="footer-logo">
+        CARSTAR
+    </div>
 
-    padding: 15px 16px;
+    <p>
+        Ավտոմեքենաների պրոֆեսիոնալ քիմմաքրում Երևանում
+    </p>
 
-    border-radius: 9px;
+    <div class="footer-contacts">
 
-    border: 1px solid #293544;
+        <a
+            href="https://www.instagram.com/carstar.yvn/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            @carstar.yvn
+        </a>
 
-    background: #080b10;
+        <a
+            href="tel:+37491244204"
+            class="footer-phone"
+        >
+            📞 091 244 204
+        </a>
 
-    color: white;
+    </div>
 
-    font-size: 16px;
+    <div class="address-section">
 
-    outline: none;
+        <h2>
+            Մեր հասցեն
+        </h2>
 
-    transition: 0.2s ease;
-}
+        <p>
+            📍 Դավթաշեն, 3-րդ թաղամաս, 34Ա
+        </p>
 
-input::placeholder {
-    color: #68717d;
-}
+        <a
+            href="https://www.google.com/maps/search/?api=1&query=Davtashen+3rd+District+34A%2C+Yerevan%2C+Armenia"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-map-button"
+        >
+            📍 Ինչպես հասնել
+        </a>
 
-input:focus,
-select:focus {
-    border-color: #168cff;
+    </div>
 
-    box-shadow:
-        0 0 0 3px rgba(22, 140, 255, 0.10);
-}
+    <span class="copyright">
+        CarStar © 2026
+    </span>
 
-select {
-    cursor: pointer;
-}
+</footer>
 
-.form-row {
-    display: grid;
 
-    grid-template-columns: 1fr 1fr;
+<script src="script.js"></script>
 
-    gap: 15px;
-}
+</body>
 
-
-/* ==============================
-   PRICE
-   ============================== */
-
-.price-box {
-    margin-top: 4px;
-    margin-bottom: 25px;
-
-    padding: 18px;
-
-    background: rgba(22, 140, 255, 0.08);
-
-    border: 1px solid rgba(22, 140, 255, 0.35);
-
-    border-radius: 10px;
-
-    text-align: center;
-
-    color: #168cff;
-
-    font-size: 20px;
-    font-weight: 800;
-}
-
-
-/* ==============================
-   SUBMIT
-   ============================== */
-
-.submit-button {
-    width: 100%;
-
-    margin-top: 8px;
-
-    padding: 17px;
-
-    border: none;
-
-    border-radius: 10px;
-
-    background: #168cff;
-
-    color: white;
-
-    font-size: 16px;
-
-    font-weight: 800;
-
-    letter-spacing: 0.5px;
-
-    cursor: pointer;
-
-    transition: 0.25s ease;
-}
-
-.submit-button:hover {
-    background: #0876dc;
-
-    transform: translateY(-1px);
-
-    box-shadow:
-        0 10px 25px rgba(22, 140, 255, 0.2);
-}
-
-.submit-button:disabled {
-    opacity: 0.65;
-    cursor: wait;
-    transform: none;
-}
-
-
-/* ==============================
-   SUCCESS / ERROR
-   ============================== */
-
-.success-message,
-.error-message {
-    display: none;
-
-    margin-top: 20px;
-
-    padding: 18px;
-
-    border-radius: 12px;
-
-    text-align: center;
-
-    line-height: 1.5;
-}
-
-.success-message {
-    background: rgba(22, 140, 255, 0.08);
-
-    border: 1px solid rgba(22, 140, 255, 0.35);
-
-    color: #dceeff;
-}
-
-.success-message strong,
-.success-message span {
-    display: block;
-}
-
-.success-message span {
-    margin-top: 5px;
-}
-
-.error-message {
-    background: rgba(255, 70, 70, 0.08);
-
-    border: 1px solid rgba(255, 70, 70, 0.3);
-
-    color: #ffb4b4;
-}
-
-
-/* ==============================
-   FOOTER
-   ============================== */
-
-footer {
-    padding: 40px 20px;
-
-    text-align: center;
-
-    color: #606975;
-
-    font-size: 14px;
-
-    border-top: 1px solid #1b2430;
-}
-
-.footer-logo {
-    color: #168cff;
-
-    font-size: 20px;
-    font-weight: 900;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 8px;
-}
-
-footer p {
-    margin-bottom: 8px;
-}
-
-footer a {
-    color: #8f98a4;
-
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: #168cff;
-}
-
-.copyright {
-    display: block;
-    margin-top: 18px;
-}
-
-
-/* ==============================
-   MOBILE
-   ============================== */
-
-@media (max-width: 900px) {
-
-    .packages-container {
-        grid-template-columns: 1fr;
-
-        max-width: 650px;
-
-        margin: 0 auto;
-    }
-
-    .package-card {
-        min-height: auto;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    .site-header {
-        padding: 17px 20px;
-    }
-
-    .logo {
-        font-size: 24px;
-    }
-
-    .instagram {
-        font-size: 12px;
-    }
-
-    .hero {
-        min-height: 75vh;
-
-        padding: 70px 20px;
-    }
-
-    .hero-label {
-        font-size: 10px;
-        letter-spacing: 3px;
-    }
-
-    .hero h1 {
-        font-size: 41px;
-    }
-
-    .hero-description {
-        font-size: 16px;
-    }
-
-    .hero-actions {
-        flex-direction: column;
-    }
-
-    .button,
-    .secondary-button {
-        width: 100%;
-        text-align: center;
-    }
-
-    .packages {
-        width: calc(100% - 30px);
-
-        margin-bottom: 80px;
-    }
-
-    .packages-header {
-        margin-bottom: 35px;
-    }
-
-    .packages-header h2 {
-        font-size: 32px;
-    }
-
-    .package-card {
-        padding: 27px 22px;
-        border-radius: 17px;
-    }
-
-    .package-card h3 {
-        font-size: 27px;
-    }
-
-    .booking {
-        width: calc(100% - 30px);
-
-        padding: 28px 20px;
-
-        border-radius: 18px;
-
-        margin-bottom: 70px;
-    }
-
-    .booking-header h2 {
-        font-size: 27px;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    input,
-    select {
-        padding: 14px;
-    }
-}
-.location-button {
-    display: inline-block;
-    padding: 16px 32px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 700;
-    color: #ffffff;
-    background: #168cff;
-    border: 1px solid #168cff;
-    box-shadow: 0 10px 30px rgba(22, 140, 255, 0.18);
-    transition: 0.25s ease;
-}
-
-.location-button:hover {
-    background: #0876dc;
-    border-color: #0876dc;
-    transform: translateY(-2px);
-    box-shadow: 0 14px 35px rgba(22, 140, 255, 0.28);
-}
-.header-contacts {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.header-contacts a {
-    color: #168cff;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.phone-link {
-    border: 1px solid #168cff;
-    padding: 8px 14px;
-    border-radius: 8px;
-}
+</html>
